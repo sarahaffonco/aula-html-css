@@ -81,6 +81,51 @@ tag caption para dar nome a tabela
 
 <div> <span> tag generica, sem valor semântico mas agrupa elementos e estiliza a pagina
 
+### gerenciamento de foco 
+*acessibilidade* -caso queira, a parte visivel do foco deve ser estilizada e nao retirada
+<tabindex> informa a ordem de foco (navegação por teclado) dos elementos da página
+<tabindex="1">primeiro elemento a ser focado
+
+<tabindex="0"> todos elementos, automaticamente
+
+### semântica
+usar o código como foi criado, um código limpo facilita uso em app móvel, deixa o site entre melhores resultados no mec. de busca.
+
+o que devemos fazer? manter a estrutura, layout consistente, de maneira clara e objtiva 
+
+html - estrutura
+css - estilização
+
+### wai-aria
+*accessible rich internet applications*
+especificação do w3c para melhorar a acessibilidade.
+Regras:
+- preferencia para utilizar os elementos semânticos
+- não alterar a semantica padrão do elemento
+- não se oculta elementos interativos e devem ter a semantica correta
+-textos interativos devem ser descritivos
+-todos elementos interativos devem poder ser utilizados atravéd do teclado,
+- Nao esquecer que usuario pode acessar o site de qualquer dispositivos
+
+ARIA roles - funções
+Utilizamos para indicar o que elemento faz, não seja redundante!
+ex: <form role="search"></form>
+<nac role="navigation"></nav> - redundante
+*existe um site com todos aria roles*
+
+Aria properties - propriedades
+utilizado para adicionar semântica nos elementos que não a tem por padrão
+Utilizamos atributos com prefixo "aria"
+ex: <button aria-haspopup="true"></button>
+
+Aria States - estados
+Utilizado quando desejamos informar a condição atual dos elementos 
+Utilizamos aria-
+ex: <input type-"checkbox aria-selected="true">
+
+### Acessibilidade
+Para testar, se usa leitores de tela.
+Pode-se instalar pllugins para medir o nivel de acessibilidade ou sites que verificam.
 
 
 
