@@ -66,3 +66,37 @@ li:nth-child(2) {
     color: #ff0000
 }
 
+.exemplo {
+    height: 150px; /*largura*/;
+    width: 150px; /*altura*/
+}
+
+.exemplo {
+    height: 100%; /*largura*/
+   }
+
+   .texto {
+    font-family: cursive;
+   }
+
+   .texto {
+    font-family: verdana;
+   }
+
+   .texto {
+    background-color: green
+    display:inline;
+   }
+
+
+   .link {
+    background-color: green
+    padding:15 px;
+    display: inline-block;
+   }
+
+   .link {
+    background-color: green
+    padding:15 px;
+    display: none;
+   }

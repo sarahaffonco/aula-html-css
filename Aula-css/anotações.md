@@ -42,11 +42,11 @@ nth-child (odd) (impar)
 
 
 *Pseudo-elementos*
-Permite estilizar uma parte especifica do elemento selecionado, ou criar uma parte do elemento selecionado
+Permite estilizar uma parte especifica do elemento selecionado, ou criar uma parte do elemento selecionado.
 
 After - cria elemento como ultimo filho do que selecionamos
 
-Before - Cria elemento como primeiro filho do elemento selecionado
+Before - Cria elemento como primeiro filho do elemento selecionado.
 
 ~nos pseudo elementos utilizamos ::, diferente da pseudo classe.
 
@@ -61,4 +61,28 @@ Hexadecimal - reduz as cores em caracteres.
 *Unidade de medida*
 
 Pixel - define um tamanho estático para elemento ou propriedade CSS.
+
+Porcentagem - tamanho relativo.
+
+*Fontes*
+Pode-se alterar o nome da fonte e o estido da fonte de todos textos.
+Caso necessário inserir mais de duas fontes, as fontes ficam entre virgulas. Ex: verdana, Aria, Sans-serif.
+
+Também podemos importar a fonte no html:
+google Fontes - Select this style > copia o código que o próprio google livera e colocar na head e assim coloca a fonte no css.
+
+**Opções mais comuns de Display**
+o valor de display já é pré definido nos navergadores.
+
+Display Block - se comporta como um bloco na página, ocupando a linha inteira mesmo que não for definido um valor.
+
+Display Inline - ocupa somente o texto, como uma caixa. Não aceitam propriedade de altura e largura, para isso se usa o inline-block.
+
+Display inline-block - permite que os elementos se comportem corretamente ao receber algumas propriedades.
+
+Display None - faz com que o elemento não seja exibido na tela.
+
+
+
+
 
