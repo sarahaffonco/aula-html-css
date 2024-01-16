@@ -343,8 +343,50 @@ Ex: . caixa {
 *alterar o tamanho da imagem "background-size: 50px 60 px"
 
 
+## Principais conceitos CSS
 
+- Efeito cascata - a última regra que fica vigente. 
 
+- Herança - O Css se comporta passando estilo de pai para filho. 
+ALguns valores não passam por herança como as propriedades de box model (width, heigh, paddington); para forçar a herança se usa inherit.
+Ex: .elemento-filho {
+    width: inherit;
+}
+
+- Calculo de espcificidade - seletores diferentes, tem pesos diferentes independente da cascata.
+O seletor mais especifico tem vantagem (precedência) pelo seletor mais generico.
+Existe um valor para cada tipo de elemento e asssim vemos sua especificidade.
+*calculo* /*10 +10 +10 =30 * (cada tipo de seletor tem um valor.. seletor de classe = 10 pontos, seletor de elemento 1 ponto, seletor de id 100 pontos)
+
+## Animações com CSS
+Podemos controlar as mudanças de cor para suavizar, isso ocorre pela propriedade transition.
+Ex: .botao {
+    background-color: #e768f2;
+    transition: background-color .5s;
+
+}
+
+Devemos imaginar as animações sempre como uma linha do tempo, com começo meio e fim.
+regra "@keyframes".
+Ex: @keyframes animacao {
+    0% { 
+        background-color: pink
+    }
+    100% {
+        Background-color:purple
+    }
+    
+}
+.caixa {
+    width: 300px;
+    height: 300px;
+    animation: animacao 1s infinite;
+}
+
+### Performace em animações
+*cuidado para não travar o computador do usuário*
+Para animar alguma propriedade, pode-se usar o will-change para melhorar o desempenho
+Ex: will-change: left e top
 
 
 
