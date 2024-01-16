@@ -1,72 +1,135 @@
-##CSS
+# CSS
 *cascading style sheets*
-Folha de estilo em cascata
+Folha de estilo em cascata.
 
-Existem 3 formas de utilizar o CSS
+Existem 3 formas de utilizar o CSS:
 
-In Line - <style="informação do atributo>
+- In Line - <style="informação do atributo>
 
-Interna - dentro da head <style> p {color} </style>
+- Interna - dentro da head 
+Ex: <style> p {color} </style>
 
-Externa - abrindo um novo documento no .css;
-"adiciona o css com a tag <link> que fica no head. ex <link rel="stylesheet" href="estilo.css">
-Css é composto pelas regras
+- Externa - abrindo um novo documento no formato .css;
+"adiciona o css com a tag <link> que fica no head. 
+Ex <link rel="stylesheet" href="estilo.css">
+
+Css é composto pelas regras:
 p (seletor) {propriedade:valor} (todo {} é uma declaração)
 
-*seletores css*
-Seletor Tipo/elemento - seletor do elemento p (irá alterar o estilo de todos elementos p)
+## seletores css
+- Seletor Tipo/elemento - seletor do elemento p (irá alterar o estilo de todos elementos p)
+Ex: p {
+    color:green;
+}
 
-Seletor Classe - como se fosse um apelido do elemento ".classe" 
+- Seletor Classe - como se fosse um apelido do elemento ".classe" 
+Ex:.roxo {
+    color:purple
+}
 
-Seletor de iD - No html se coloca id="nomedoid"; e no css #nomedoid
 
-Seletor global - representado por *, seleciona todos os elementos da página
+- Seletor de iD - No html se coloca id="nomedoid"; e no css #nomedoid.
+Ex:#paragrafo {
+    color:brown
+}
 
-Seletor de descendente - selecina todos elementos aninhados, em todos os niveis. Se não quiser que todo o elemento da main mude o estilo, se usa o seletor de "filho" main >h3 (somente os h3 que estiverem devidamente aninhado com a main, será selecionado).
+- Seletor global - representado por *, seleciona todos os elementos da página.
+Ex: *{
+   color: pink;
+}
 
-*Pseudo Seletores/pseudo classes*
-Pseudo elemento, criamos elementos para estilizar
-Seletor Hover - faz com que a regra Css aplica o estilo apenas quando passamos o mouse em cima do elemento.
+- Seletor de descendente - selecina todos elementos aninhados, em todos os niveis. Se não quiser que todo o elemento da main mude o estilo, se usa o seletor de "filho" main >h3 (somente os h3 que estiverem devidamente aninhado com a main, será selecionado).
+Ex: main h3 {
+    color:red
+}
 
-Seletor Focus - aplica a regra quando o elemento estiver focado (tab)
 
-Seletor Active - aplica a regra quando usuário clicar no elemento ou enquanto o elemento estiver pressionado.
+## Pseudo Seletores/pseudo classes
+Pseudo elemento, criamos elementos para estilizar, sendo eles: 
 
-Seletor first Child -  seleciona o primeiro elemento filho encontrado na pagina.
+- Seletor Hover - faz com que a regra Css aplica o estilo apenas quando passamos o mouse em cima do elemento.
+Ex: .exemplo:hover {
+    background-color: pink;
+}
 
-Seletor last-child - seleciona o ultimo elemento.
+- Seletor Focus - aplica a regra quando o elemento estiver focado (tab).
+Ex: .exemplo:focus {
+    background-color: pink;
+}
 
-Nth-Chil - seleciona o que optamos.
+- Seletor Active - aplica a regra quando usuário clicar no elemento ou enquanto o elemento estiver pressionado.
+Ex: .exemplo:active {
+    background-color: lightslategrey;
+}
+
+- Seletor first Child -  seleciona o primeiro elemento filho encontrado na pagina.
+Ex: li:first-child {
+    color:blue
+}
+
+- Seletor last-child - seleciona o ultimo elemento.
+Ex: li:last-child {
+    color:red
+}
+
+- Nth Chil - seleciona o que optamos.
 ex: li:nth-child (2) (item 2) 
-nth-child (odd) (impar)
+nth-child (odd) (impar).
+Ex: li:nth-child(2) {
+    color: green;
+}
 
 
-*Pseudo-elementos*
+## Pseudo-elementos
 Permite estilizar uma parte especifica do elemento selecionado, ou criar uma parte do elemento selecionado.
 
-After - cria elemento como ultimo filho do que selecionamos
+- After - cria elemento como ultimo filho do que selecionamos
+Ex:.exemplo::after {
+    CONTENT: "DEPOIS";
+}
 
-Before - Cria elemento como primeiro filho do elemento selecionado.
+-Before - Cria elemento como primeiro filho do elemento selecionado.
+Ex: .exemplo::before {
+    CONTENT: "ANTES";
+}
 
-~nos pseudo elementos utilizamos ::, diferente da pseudo classe.
+*nos pseudo elementos utilizamos ::, diferente da pseudo classe*
 
-*Declarando cor*
+## Declarando cor
 
-Escrever o nome da cor em ingles {color:green}
+- Escrever o nome da cor em ingles {color:green}.
+Ex: .exemplo {
+    Color: green
+}
 
-RGB (red green blue) - representa as cores em escala, enumeradas de  a 255 para indicar a quantidade de cor.
+- RGB (red green blue) - representa as cores em escala, enumeradas de  a 255 para indicar a quantidade de cor.
+Ex: .exemplo {
+    color: rgb (255,50,0)
+} 
 
-Hexadecimal - reduz as cores em caracteres.
+- Hexadecimal - reduz as cores em caracteres.
+Ex: . exemplo { color: #ff0000 }
 
-*Unidade de medida*
 
-Pixel - define um tamanho estático para elemento ou propriedade CSS.
+## Unidade de medida
 
-Porcentagem - tamanho relativo.
+- Pixel - define um tamanho estático para elemento ou propriedade CSS.
+ex: .exemplo {
+    height: 150px; /*largura*/;
+    width: 150px; /*altura*/
+} 
 
-*Fontes*
+- Porcentagem - tamanho relativo.
+Ex: .exemplo {
+    height: 100%; /*largura*/
+   }
+
+## Fontes
 Pode-se alterar o nome da fonte e o estido da fonte de todos textos.
 Caso necessário inserir mais de duas fontes, as fontes ficam entre virgulas. Ex: verdana, Aria, Sans-serif.
+Ex:  .texto {
+    font-family: cursive;
+   }
 
 Também podemos importar a fonte no html:
 google Fontes - Select this style > copia o código que o próprio google livera e colocar na head e assim coloca a fonte no css.
@@ -74,13 +137,166 @@ google Fontes - Select this style > copia o código que o próprio google livera
 **Opções mais comuns de Display**
 o valor de display já é pré definido nos navergadores.
 
-Display Block - se comporta como um bloco na página, ocupando a linha inteira mesmo que não for definido um valor.
+- Display Block - se comporta como um bloco na página, ocupando a linha inteira mesmo que não for definido um valor.
+Ex: .texto {
+     background-color: green display:inline; 
+     }
 
-Display Inline - ocupa somente o texto, como uma caixa. Não aceitam propriedade de altura e largura, para isso se usa o inline-block.
+- Display Inline - ocupa somente o texto, como uma caixa. Não aceitam propriedade de altura e largura, para isso se usa o inline-block.
+Ex: .texto {
+    background-color: green
+    display:inline;
+   }
 
 Display inline-block - permite que os elementos se comportem corretamente ao receber algumas propriedades.
+Ex:  .link {
+    background-color: green
+    padding:15 px;
+    display: inline-block;
+   }
 
 Display None - faz com que o elemento não seja exibido na tela.
+Ex:   .link {
+    background-color: green
+    padding:15 px;
+    display: none;
+   }
+
+## Posicionamento 
+
+- Position static - valor padrão de posicionamento e nao pode ser alterado
+
+
+- Position Relative - é uma posição relativa, e pode ser alterada.
+Ex:  .caixa {
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    position:relative;
+    top: 100px;
+    left: 50px
+    z-index:2;
+   }
+
+- Position absolut - irá se posicionar na tela ignorando todos elementos, pode ocorrer uma sobreposição de elementos.
+Ex: .caixa-absoluta{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top: 50px;
+    left: 45px
+   }
+
+   
+   .caixa-absoluta{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position:fixed;
+    top: 10px;
+    
+   }
+
+*propriedade z-index, especifica a ordem de profundidade. A propriedade maior fica por cima da propriedade menos
+
+Position fixed - fica fixo na pagina.
+
+## Espaçamento
+
+- Propriedade Margem - podemos declarar de 4 formas 
+Valor.
+Ex: width: 100px;
+    height: 100px;
+    Margin: 100px
+
+- Valor especifico 
+Ex:  width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+
+- Margem abreviada
+Ex: margin: 5px 10px 15px 20px
+ top;right;left;right;
+
+- Margens iguais
+Ex: margin: 30px 40px
+
+# padding 
+Define o espaçamento interno dos elementos (distancia do elemento para a borda dele); pode-se declarar igual a margem.
+o valor do padding é somado ao valor total do elemento; para evitar essa soma utilizamos a propriedade box-sizing
+Box-sizing Border-box - o elemento terá os valores que definimos, o padding passa a ser conjunto ao valor total ao invés de somada
+Ex: .botao {
+    padding: 5px 20px;
+    width: 50px;
+    height: 50px;
+    Box-sizing: Border-box;
+   }
+
+## Estilos padrões dos elementos
+- Cada navegador adiciona o seu próprio estilo CSS, para verificar os padrões basta "inspecionar " na página da web.
+
+## Propriedades genéricas 
+
+### Borda
+Temos duas maneiras de declarar a borda: de forma resumida e de forma especifica.
+Para arredondar os cantos da borda, se usa border-radius.
+Ex: 
+   .caixa-1{
+    border: 1px solid red;
+    border-radius:10px;
+    box-shadow:5px 5px 10px 5px black
+    }
+
+   .caixa-2{
+    border-width:1px
+    border-style:solid
+    border-color:green
+   }
+
+Box-shadows - adiciona efeito sombra aos elementos.
+Ex:  box-shadow:5px 5px 10px 5px black 
+box-shadow: eixo horizontal; eixo vertical; desfoque;propagação e cor. 
+
+
+Cursor - altera o estilo do cursor.
+Ex: 
+   .botão{
+    cursor:pointer
+   } 
+
+Overflow - Ignora o conteudo que não "cabe" nas dimenções da caixa
+Overflow:scroll - cria uma barra de rolagem dentro da caixa.
+
+### Estilizar textos
+Fonte size - Controla o tamanho da font
+Ex: font-size: 12px
+
+- Font-wight - altera o peso (como se fosse negrito)
+Ex: font-wight:bold
+
+- Text align - para alinhar o texto, aceita os valores: center, justify, left, right...
+
+Text indent - define o espaço antes de iniciar uma linha de texto
+ex: texte-indent:20px
+
+Latter Space - determina o espaçamento do conteúdo.
+Ex: latter-spacing: 5px
+
+Line Height define a altura da linha do texto
+Ex: line-height: 40px
+
+## Principais propriedades
+list style - controla os principais marcadores da lista 
+
+
+
+
+
+
 
 
 

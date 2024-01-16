@@ -100,3 +100,55 @@ li:nth-child(2) {
     padding:15 px;
     display: none;
    }
+
+   .caixa {
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    position:relative;
+    top: 100px;
+    left: 50px
+    z-index:2;
+   }
+
+   .caixa-absoluta{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top: 50px;
+    left: 45px
+   }
+
+   
+   .caixa-absoluta{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position:fixed;
+    top: 10px;
+    
+   }
+
+   .botao {
+    padding: 5px 20px;
+    width: 50px;
+    height: 50px;
+    Box-sizing: Border-box;
+   }
+
+   .caixa-1{
+    border: 1px solid red;
+    border-radius:10px;
+    box-shadow:5px 5px 10px 5px black
+    }
+
+   .caixa-2{
+    border-width:1px
+    border-style:solid
+    border-color:green
+   }
+
+   .botão{
+    cursor:pointer
+   }
