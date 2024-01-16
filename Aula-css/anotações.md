@@ -239,7 +239,7 @@ Ex: .botao {
 ## Estilos padrões dos elementos
 - Cada navegador adiciona o seu próprio estilo CSS, para verificar os padrões basta "inspecionar " na página da web.
 
-## Propriedades genéricas 
+## Propriedades genéricas - Textos
 
 ### Borda
 Temos duas maneiras de declarar a borda: de forma resumida e de forma especifica.
@@ -289,8 +289,59 @@ Ex: latter-spacing: 5px
 Line Height define a altura da linha do texto
 Ex: line-height: 40px
 
-## Principais propriedades
-list style - controla os principais marcadores da lista 
+## Principais propriedades - Listas
+- List style - controla os principais marcadores da lista.
+Ex: .lista {
+    list-style:none
+}
+*none - não exibe nenhum marcador;*
+*Square - os marcadores são quadrados;*
+*lower-roman - exibe os marcadores em romanos.*
+
+## Principais propriedades - Link
+Existe um padrão.
+Atenção para nao esquecer nenhum comando importante.
+Quando passamos o valor # no link, quer dizer que não leva a nenhuma página *não pode acontecer*
+*html* <a href=# class="link"> Clique aqui.</a>
+
+- Text decoration - remove o sublinhado do link
+Ex: .link {
+    text-decoration:none;
+    color: tomato;
+    }   
+
+- Hover - ao passar o mouse por cima do link, altera a cor.
+    . link:hover{
+        color:violet;
+        
+    }
+
+- Active - quando o link for clicado ou pressionado.
+    .link: active {
+        color:darksalmon
+    }
+
+- Focus - quando o elemento está focado.
+    .link:focus {
+        outline: none;
+        border: 1px solid tomato
+    }
+
+## Principai propriedades -outras
+- Background Image - permite colocar um background no elemento sem inserir a imagem no html.
+*html <div class="caixa"></div>
+Ex: . caixa {
+    width: 400px;
+    height: 400px;
+    border: 1pc solid green;
+    Background-image:url('imagem.jpg");
+}
+*pode acontecer um erro de tamanho, para resolver a repetição, basta usar "background-repeat:no-repeat;"*
+
+*controlar a posição da imagem "background -position: 10px 40px" ou "background -position: center"
+
+*alterar o tamanho da imagem "background-size: 50px 60 px"
+
 
 
 
