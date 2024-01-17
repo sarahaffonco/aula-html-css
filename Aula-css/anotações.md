@@ -388,6 +388,131 @@ Ex: @keyframes animacao {
 Para animar alguma propriedade, pode-se usar o will-change para melhorar o desempenho
 Ex: will-change: left e top
 
+## Trabalhando com  Transformações
+### Scale
+o valor scale é utilizado para transformar a escala do elemento. O valor scale pode variar conforme o eixo (x/y) scaleX(.3).
+Essa transformação só é feita no próprio intem.
+Ex: .caixa {
+    width: 300px;
+    height: 300px;
+    Background-color:purple;
+    transform: scale (2)
+}
+
+### Rotate
+O rotate faz com que o elemento rotacione
+ex:width: 300px;
+    height: 300px;
+    Background-color:purple;
+    transform:rotate (35deg)
+
+També podemos utilizar pelo @keyframes
+width: 300px;
+    height: 300px;
+    Background-color:purple;
+    animation: girando 2s infinite;
+
+@keyframes girando {
+    transform: rotate (0deg);
+}
+
+    100% {
+        transform: rotate (360deg);
+    }
+
+### Translate 
+Transforma a posição dos elementos. 
+Também podemos alterar somente na ordenada x ou y.
+Ex: width: 300px;
+    height: 300px;
+    Background-color:purple;
+    transform:translate (30px, 30px)
+
+### Skew
+Utilizado para distorcer o elemento.
+Também podemos alterar somente na ordenada x ou y.  
+ Ex: width: 300px;
+    height: 300px;
+    Background-color:purple;
+    transform:skew (10deg)
+
+### Opacity
+Altera a opacidade de um elemento, por não ser necessária a transformação, usa-se somente o comando.
+ Ex:.botao {
+    opacity: .5
+ }
+
+ ## Css Layouts - Box Model
+ Para analisar ou construir um layout, precisamo entender sua função individual.
+ o Box Model descreve as caracteristicas que definem o espaço de um elemento na página. 
+ Cada elemento tem 4 áreas especificas (edges)
+  - Area de conteudo - content ed; é o espaço dentro do elemento onde podemos adicionar qualquer conteudo, pode ser alterada com as propriedades de altura e largura. 
+  As edges podem ser vizualidas na area elements do navegador.
+  Margin Edge
+  Border Edge
+  Padding edge
+  Ex: width: 100px;
+    height: 100px;
+
+## Css Layouts - Flex-box
+Geralmente lida com o elemento pai (flex container). 
+*html* cria uma div class=container
+Ex: .container {
+    border: 1px solid green;
+    display: flex;
+}
+
+### Propriedades do Flex-box
+- Flex direction - controla a direção dos flex, seu padrão é row e se comportam como linha.
+Ex: border: 1px solid green;
+    display: flex;
+    flex-direction: row-reverse;
+
+- Flex-Wrap - altera o comportamento quando redimensionamos a janela, o comportamento padrão (nowwrap) é se ajusta diminuindo seu tamanho, ao utilizar o wrap elas se comportam criando uma nova linha.
+Ex: border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap
+
+- Flex-flow - tambem podemos chamar de  shorthand para flex direction e flex wrap. Podemos utilizar doi valores wrap e direction.
+Ex: border: 1px solid green;
+    display: flex;
+    flex-flow: row-reverse wrap
+
+- Justify-content - permite alinhar os itens horizontalmente. 
+o valor padrão é Flex Start (alinha no começo da linha, a esquerda).
+Essa propriedade não funciona se utilizarmos flex-wrap: wrap;
+Valores: end, center, space-between (espaços iguais); space-around;space-evenly.
+Ex: border: 1px solid green;
+    display: flex;
+    justify-content: flex-end
+
+- Align-items - alinha os elementos verticalmente, valor padrão é stretch.
+Valores: flex -start (cada item tem altura de acordo com o conteudo) ; flex-end (alinha na parte inferior); flex-center
+Ex: border: 1px solid green;
+    display: flex;
+    height: 300pc
+    align-items: flex-end
+
+- Align-Content  - alinha os flex itens em flex container e permite mais de uma linha.
+Valores: stretch (forma linhas); start (tem a altura definido pelo conteudo) center, end, epace-between, space around
+Ex: border: 1px solid green;
+    display: flex;
+    height: 300pc
+    flex-wrap: wrap
+    Align-content: stretch
+
+- Order - modifica os flex itens e não o flex container. Para definir order, temos que redefinir os valores de todos intens
+Valores: 
+Ex: .caixa: nth-child (3)
+    order: 1
+
+- Grow - modifica o tamanho do item, se necessário. Por padrão odo grow é 0.
+Quanto maior o valor, maior a caixa do item.
+Ex: .caixa: nth-child (3).
+    flex-grow: 1
+
+Não finalizado modulo 11
+
 
 
 
