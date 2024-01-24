@@ -192,18 +192,18 @@ Regras:
 - Todos elementos interativos devem poder ser utilizados atravéd do teclado;
 - Não esquecer que usuario pode acessar o site de qualquer dispositivos.
 
-ARIA roles - funções:
+### ARIA roles - funções:
 Utilizamos para indicar o que elemento faz, não seja redundante!
 ex: <form role="search"></form>
 <nac role="navigation"></nav> - redundante
 *existe um site com todos aria roles*
 
-Aria properties - propriedades:
+### Aria properties - propriedades:
 utilizado para adicionar semântica nos elementos que não a tem por padrão
 Utilizamos atributos com prefixo "aria".
 ex: <button aria-haspopup="true"></button>
 
-Aria States - estados:
+### Aria States - estados:
 Utilizado quando desejamos informar a condição atual dos elementos 
 Utilizamos aria-.
 ex: <input type-"checkbox aria-selected="true">

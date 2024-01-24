@@ -134,7 +134,7 @@ Ex:  .texto {
 Também podemos importar a fonte no html:
 google Fontes - Select this style > copia o código que o próprio google livera e colocar na head e assim coloca a fonte no css.
 
-**Opções mais comuns de Display**
+## Opções mais comuns de Display
 o valor de display já é pré definido nos navergadores.
 
 - Display Block - se comporta como um bloco na página, ocupando a linha inteira mesmo que não for definido um valor.
@@ -148,7 +148,7 @@ Ex: .texto {
     display:inline;
    }
 
-Display inline-block - permite que os elementos se comportem corretamente ao receber algumas propriedades.
+- Display inline-block - permite que os elementos se comportem corretamente ao receber algumas propriedades.
 Ex:  .link {
     background-color: green
     padding:15 px;
@@ -198,7 +198,7 @@ Ex: .caixa-absoluta{
     
    }
 
-*propriedade z-index, especifica a ordem de profundidade. A propriedade maior fica por cima da propriedade menos
+*propriedade z-index*, especifica a ordem de profundidade. A propriedade maior fica por cima da propriedade menos
 
 Position fixed - fica fixo na pagina.
 
@@ -257,22 +257,22 @@ Ex:
     border-color:green
    }
 
-Box-shadows - adiciona efeito sombra aos elementos.
+- Box-shadows - adiciona efeito sombra aos elementos.
 Ex:  box-shadow:5px 5px 10px 5px black 
 box-shadow: eixo horizontal; eixo vertical; desfoque;propagação e cor. 
 
 
-Cursor - altera o estilo do cursor.
+- Cursor - altera o estilo do cursor.
 Ex: 
    .botão{
     cursor:pointer
    } 
 
-Overflow - Ignora o conteudo que não "cabe" nas dimenções da caixa
-Overflow:scroll - cria uma barra de rolagem dentro da caixa.
+- Overflow - Ignora o conteudo que não "cabe" nas dimenções da caixa
+- Overflow:scroll - cria uma barra de rolagem dentro da caixa.
 
-### Estilizar textos
-Fonte size - Controla o tamanho da font
+## Estilizar textos
+- Fonte size - Controla o tamanho da font
 Ex: font-size: 12px
 
 - Font-wight - altera o peso (como se fosse negrito)
@@ -280,13 +280,13 @@ Ex: font-wight:bold
 
 - Text align - para alinhar o texto, aceita os valores: center, justify, left, right...
 
-Text indent - define o espaço antes de iniciar uma linha de texto
+- Text indent - define o espaço antes de iniciar uma linha de texto
 ex: texte-indent:20px
 
-Latter Space - determina o espaçamento do conteúdo.
+- Latter Space - determina o espaçamento do conteúdo.
 Ex: latter-spacing: 5px
 
-Line Height define a altura da linha do texto
+- Line Height define a altura da linha do texto
 Ex: line-height: 40px
 
 ## Principais propriedades - Listas
@@ -383,13 +383,13 @@ Ex: @keyframes animacao {
     animation: animacao 1s infinite;
 }
 
-### Performace em animações
+## Performace em animações
 *cuidado para não travar o computador do usuário*
 Para animar alguma propriedade, pode-se usar o will-change para melhorar o desempenho
 Ex: will-change: left e top
 
 ## Trabalhando com  Transformações
-### Scale
+- Scale
 o valor scale é utilizado para transformar a escala do elemento. O valor scale pode variar conforme o eixo (x/y) scaleX(.3).
 Essa transformação só é feita no próprio intem.
 Ex: .caixa {
@@ -399,7 +399,7 @@ Ex: .caixa {
     transform: scale (2)
 }
 
-### Rotate
+- Rotate
 O rotate faz com que o elemento rotacione
 ex:width: 300px;
     height: 300px;
@@ -420,7 +420,7 @@ width: 300px;
         transform: rotate (360deg);
     }
 
-### Translate 
+- Translate 
 Transforma a posição dos elementos. 
 Também podemos alterar somente na ordenada x ou y.
 Ex: width: 300px;
@@ -428,7 +428,7 @@ Ex: width: 300px;
     Background-color:purple;
     transform:translate (30px, 30px)
 
-### Skew
+- Skew
 Utilizado para distorcer o elemento.
 Também podemos alterar somente na ordenada x ou y.  
  Ex: width: 300px;
@@ -436,7 +436,7 @@ Também podemos alterar somente na ordenada x ou y.
     Background-color:purple;
     transform:skew (10deg)
 
-### Opacity
+- Opacity
 Altera a opacidade de um elemento, por não ser necessária a transformação, usa-se somente o comando.
  Ex:.botao {
     opacity: .5
@@ -511,7 +511,22 @@ Quanto maior o valor, maior a caixa do item.
 Ex: .caixa: nth-child (3).
     flex-grow: 1
 
-Não finalizado modulo 11
+- Flex Shrink - utilizada para determinar como o flex iten vai diminuir. Por padrão, esse valor é = 1
+Quanto maior o valor do flex shrink, mais rápido o box irá diminuir.
+
+- Flex Basis - Define o valor inicial do flex iten, controla largura e altura. 
+
+- Flex - abreviação de outras propriedades ( Grow; Shrink ;Basis) para se trabalhar em um unico enveto
+Ex.caixa:nth-child(2) {
+    flex:0 1 100px;
+}
+
+- Align Self - independe do flex container
+Ex.caixa:nth-child(2){
+ex: align-self : flex-end;
+}
+
+- Grid Layout - é bi dimensional, trabalha com linhas e colunas ao mesmo tempo.
 
 
 
