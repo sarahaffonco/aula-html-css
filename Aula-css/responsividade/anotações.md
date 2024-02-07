@@ -36,3 +36,18 @@ ex: <img srcset = "imagens/gatopqno.jpg 200w,
                     sizes ="(max-width:200px)" 200px, 700px
     >
 
+## Media Queries 
+GAP: nPX
+(assim o conteúdo vai se adaptando conforme o tamenho)
+
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+https://cursos.alura.com.br/course/html-css-responsividade-publicacao-projetos/task/121397
+
+@media (max-width: 1200px ){
+    .apresentacao{
+        flex:direction:column-reverse;
+    } 
+}
